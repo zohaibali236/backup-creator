@@ -39,7 +39,7 @@ int main(int argc, char** argv)
     {
         time_t time_ = time(NULL);
 
-        if((time_ - currenttime) >= argv[3])
+        if((time_ - currenttime) >= int(argv[3]))
         {
             system(cstring);
             currenttime = time(NULL);
@@ -149,17 +149,17 @@ std::string unixTimeToHumanReadable(long int seconds) //https://www.geeksforgeek
     minutes = (extraTime % 3600) / 60;
     secondss = (extraTime % 3600) % 60;
  
-    ans += to_string(date);
+    ans += std::to_string(date);
     ans += "/";
-    ans += to_string(month);
+    ans += std::to_string(month);
     ans += "/";
-    ans += to_string(currYear);
+    ans += std::to_string(currYear);
     ans += " ";
-    ans += to_string(hours);
+    ans += std::to_string(hours);
     ans += ":";
-    ans += to_string(minutes);
+    ans += std::to_string(minutes);
     ans += ":";
-    ans += to_string(secondss);
+    ans += std::to_string(secondss);
  
     // Return the time
     return ans;
