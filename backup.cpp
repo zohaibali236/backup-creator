@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <ctime>
 
-int main()
+int main(std::string path_from, std::string path_to, int interval)
 {
     std::cout << "█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█" << std::endl;
     std::cout << "█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█" << std::endl;
@@ -13,20 +13,20 @@ int main()
     std::cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀" << std::endl;
 
 
-    std::cout << "Enter the path of folder you want to be copied" << std::endl;
+//     std::cout << "Enter the path of folder you want to be copied" << std::endl;
     
-    std::string path_from;
-    getline(std::cin, path_from);
+//     std::string path_from;
+//     getline(std::cin, path_from);
 
-    std::cout << "Enter the path to copy to" << std::endl;
+//     std::cout << "Enter the path to copy to" << std::endl;
 
-    std::string path_to;
-    getline(std::cin, path_to);
+//     std::string path_to;
+//     getline(std::cin, path_to);
 
-    std::cout << "Enter backup interval" << std::endl;
+//     std::cout << "Enter backup interval" << std::endl;
     
-    int interval;
-    std::cin >> interval;
+//     int interval;
+//     std::cin >> interval;
 
     time_t currenttime = time(NULL);
 
