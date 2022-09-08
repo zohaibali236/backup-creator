@@ -55,7 +55,7 @@ std::string unixTimeToHumanReadable(long int seconds) //https://www.geeksforgeek
  
     // Save the time in Human
     // readable format
-    string ans = "";
+    std::string ans = "";
  
     // Number of days in month
     // in normal year
