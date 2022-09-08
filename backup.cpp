@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <ctime>
 
-int main(std::string path_from, std::string path_to, int interval)
+int main(int argc, char** argv)
 {
     std::cout << "█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█" << std::endl;
     std::cout << "█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█" << std::endl;
@@ -30,7 +30,7 @@ int main(std::string path_from, std::string path_to, int interval)
 
     time_t currenttime = time(NULL);
 
-    char cstring[path_from.length() + path_to.length() + 20];
+    char cstring[strlen(argv[1]) + strlen(argv[2]) + 20];
 
     sprintf(cstring, "xcopy \"%s\" \"%s\" /s /e /q /y", path_from.c_str(), path_to.c_str());
     std::cout << cstring << std::endl;
@@ -39,7 +39,7 @@ int main(std::string path_from, std::string path_to, int interval)
     {
         time_t time_ = time(NULL);
 
-        if((time_ - currenttime) >= interval)
+        if((time_ - currenttime) >= argv[3])
         {
             system(cstring);
             currenttime = time(NULL);
