@@ -32,7 +32,7 @@ int main(int argc, char** argv)
 
     char cstring[strlen(argv[1]) + strlen(argv[2]) + 20];
 
-    sprintf(cstring, "xcopy \"%s\" \"%s\" /s /e /q /y", path_from.c_str(), path_to.c_str());
+    sprintf(cstring, "xcopy \"%s\" \"%s\" /s /e /q /y", argv[1], argv[2]);
     std::cout << cstring << std::endl;
 
     while(true)
