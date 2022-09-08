@@ -50,7 +50,7 @@ int main(int argc, char** argv)
 }
 
 
-string unixTimeToHumanReadable(long int seconds) //https://www.geeksforgeeks.org/convert-unix-timestamp-to-dd-mm-yyyy-hhmmss-format/
+std::string unixTimeToHumanReadable(long int seconds) //https://www.geeksforgeeks.org/convert-unix-timestamp-to-dd-mm-yyyy-hhmmss-format/
 {
  
     // Save the time in Human
