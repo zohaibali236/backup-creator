@@ -4,6 +4,8 @@
 #include <cstdio>
 #include <ctime>
 
+std::string unixTimeToHumanReadable(long int);
+
 int main(int argc, char** argv)
 {
     std::cout << "█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█" << std::endl;
@@ -39,7 +41,7 @@ int main(int argc, char** argv)
     {
         time_t time_ = time(NULL);
 
-        if((time_ - currenttime) >= int(argv[3]))
+        if((time_ - currenttime) >= std::stoi(argv[3]))
         {
             system(cstring);
             currenttime = time(NULL);
